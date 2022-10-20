@@ -8,4 +8,4 @@ A python script to query AWS instance metadata
 ## To query a particular metadata key:
 * use --metadata `<metadata>` eg: python3 ec2-meta.py --version latest --metadata ami-id &nbsp;&nbsp;(This will query the metadata for particular key you supply)
 ## For extended query:
-* use --metadata `<metadata/sub` metadata> eg: python3 ec2-meta.py --version latest --metadata ami-id/events &nbsp;&nbsp;(This will query the metadata for particular key you supply)
+* use --metadata `<metadata/sub metadata>` eg: python3 ec2-meta.py --version latest --metadata ami-id/events &nbsp;&nbsp;(This will query the metadata for particular key you supply)
