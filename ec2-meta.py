@@ -20,13 +20,16 @@ def query(version=None, metadata=None):
     global url
 
     if version is None:
+        if metadata is not None:
+            print("[*] plz set the version. eg: python3 ec2-meta.py --version latest --metadata {}".format(metadata));
+            return
         result = requests.get(url)
 
         if result.ok:
             convert_to_json(result.text);
 
         else:
-            print("[*] plz set --version. eg: python3 ec2-meta.py --version latest")
+            print("[*] connection issue!!. plz check whether you running the script in the ec2 instance")
     else:
         url += "{}/meta-data".format(version)
 
@@ -56,4 +59,3 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     query(args.version, args.metadata);
-
