@@ -26,7 +26,7 @@ def query(version=None, metadata=None):
             convert_to_json(result.text);
 
         else:
-            print("[*] connection issue!!")
+            print("[*] plz set --version. eg: python3 ec2-meta.py --version latest")
     else:
         url += "{}/meta-data".format(version)
 
